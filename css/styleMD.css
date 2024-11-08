@@ -1,0 +1,203 @@
+@media (min-width: 768px) AND (max-width:991.9px){
+    header{
+        justify-content: center;
+    }
+
+    .menu-navegavel {
+        display: flex;
+        justify-content: center;   
+        padding: 1vw;
+    }
+
+    .login-nav{
+        display: flex;
+        justify-content: flex-end;
+        padding: 1vw;
+    }
+
+    .login-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Logo */
+    .logo-container {
+        height: 15vw;
+    }
+
+    .logo {
+        width: 50vw;
+    }
+
+   
+
+    .menu-navegavel ul {
+        gap: 10vw;
+    }
+
+    
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .registro-button {
+        width: 110%;
+        height: 20vw;
+        font-size: 6vw;
+        border-radius: 50px;
+    }
+
+    .registro-button-container {
+        display: flex;
+    }
+
+    .botom-button {
+        width: 55%;
+        height: 20vw;
+        font-size: 5vw;
+        border-radius: 50px;
+    }
+
+    
+
+    .outros-buttons-container {
+        width: 90%;
+        display: flex;
+        gap: 5vw;
+    }
+
+    
+    legend{
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    label{
+        margin: 1%;
+    }
+
+    .formulario-secao {
+        border-radius: 10px;
+        padding: 2%;
+        max-width: 90%;
+        margin: 5% auto ;
+        
+    }
+
+    .button-pequeno{
+        width: 20%;
+        height: 4vw;
+        font-size: 13px;
+        border-radius: 10px;
+        margin:  1%;
+    }
+
+    .gravidade-descricao {
+        display: flex;
+        gap: 3%;
+    }
+
+    .campo-formulario {
+        width: calc(49% - 10px);
+    }
+
+    .campo-formulario label {
+        display: block;
+        margin-bottom: 1%;
+    }
+
+    .campo-formulario select, 
+    .campo-formulario input {
+        width: 100%;
+        padding: 5%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    textarea { 
+        padding: 20%;
+        border-radius: 10px;
+        width: 100%;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    #foto-incidente{
+        max-width: 60%;
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+
+    .enviar-foto{
+        width: 150px;
+        display: center;
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .integrantes{
+        width: 25vw;
+        border-radius: 100%;
+    }
+
+    .info-integrante {
+        width: 60%;
+    }
+
+    .info-integrante p {
+        font-size: 16px;
+        text-align: left; 
+        margin: 1% 0;
+    }
+
+    
+
+    main p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    
+    #registros-container {
+        padding: 2%;
+        border-radius: 10px;
+        margin: 20px;
+    }
+    .notifica{
+        display: flex;
+        font-size: 20px;
+    }
+
+    .notifica-foto{
+        width: 50%;
+        display: flex;
+        padding: 4%;
+    }
+    .notifica-foto img{
+        width: 50%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+    .txtNotifica{
+        width: 50%;
+        display: block;
+        text-align: left;
+        word-wrap: break-word;
+        margin-left: 10px;
+    }
+
+    
+    .login-container {
+        padding: 4%;
+        border-radius: 8px;
+        width: 50%;
+        margin: 2%;
+        
+    }   
+}
