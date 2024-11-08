@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleXS.css">
+    <link rel="stylesheet" href="css/styleSM.css">
+    <link rel="stylesheet" href="css/styleMD.css">
+    
+    <script src="https://kit.fontawesome.com/832759ddef.js" crossorigin="anonymous"></script>
+    <title>Registro com Foto</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="menu-navegavel login-nav">
+                <div class="login-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="perfil.html">Login</a>
+                </div>
+            </nav>
+
+            <div class="logo-container">
+                <a href="home.html">
+                    <img class="logo" src="image/logo_viamobilidade.png" alt="Logo Viamobilidade">
+                </a>
+            </div>
+
+            <nav class="menu-navegavel">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="selecao_incidente.html">Registro </a></li>
+                    <li><a href="notificacao.html">Notificações</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <button class="button-pequeno voltar" onclick="history.back();">
+            <i class="fa-solid fa-arrow-left"></i>  
+            Voltar
+        </button>
+
+        <div class="formulario-secao">
+            <fieldset class="info">
+                <legend>Informações</legend>
+                <div class="gravidade-descricao">
+                    <div class="campo-formulario">
+                        <label for="sltGravidade">Gravidade: *</label>
+                        <select name="sltGravidade" id="sltGravidade" required>
+                            <option disabled selected value>-- Selecione uma opção --</option>
+                            <option value="1">1 - Muito Baixa</option>
+                            <option value="2">2 - Baixa</option>
+                            <option value="3">3 - Média</option>
+                            <option value="4">4 - Alta</option>
+                            <option value="5">5 - Muito Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="txtDescricao">Descrição:</label>
+                        <textarea name="txtDescricao" id="txtDescricao" required></textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="info">
+                <legend>Fotografia</legend>
+                <div id="imagemPreview" style="margin-top: 20px;">
+                    <img id="fotoSelecionada" src="" alt="Imagem Selecionada" style="max-width: 100%; height: auto; display: none;">
+                </div>
+                <input type="file" id="fotoInput" accept="image/*" style="display: none;" />
+                <br>
+                <button class="button-pequeno enviar-foto" id="uploadBtn">
+                    <i class="fa-solid fa-upload"></i> Enviar Arquivo
+                </button>
+            </fieldset>
+        </div>
+
+        <div class="enviar">
+            <button class="button-pequeno enviar" id="enviarBtn">
+                <i class="fa-solid fa-paper-plane"></i> Enviar
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <small>&copy;<a href="integrantes.html">2024 FutureFix</a></small>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
