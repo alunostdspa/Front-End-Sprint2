@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleXS.css">
+    <link rel="stylesheet" href="css/styleSM.css">
+    <link rel="stylesheet" href="css/styleMD.css">
+    
+    <title>Profile</title>
+    <script> 
+        const logadoS = sessionStorage.getItem('usuarioLogado');
+        const logadoL = localStorage.getItem('usuarioLogado');
+        const nome = logadoL || logadoS; 
+
+        // Se o usuário não estiver logado, redireciona para a página de login
+        if (!logadoS && !logadoL) {
+            localStorage.setItem("erro", "401");
+            window.location.href = "login.html";
+        }
+
+        // Função de logout
+        function logout() {
+            sessionStorage.removeItem('usuarioLogado');  
+            localStorage.removeItem('usuarioLogado');   
+            
+            // Redireciona para a página de login
+            window.location.href = "perfil.html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="menu-navegavel login-nav">
+                <div class="login-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="perfil.html">Login</a>
+                </div>
+            </nav>
+    
+            
+                <div class="logo-container">
+                    <a href="home.html">
+                    <img class="logo" src="image/logo_viamobilidade.png" alt="Logo Viamobilidade">
+                    </a>
+                </div>
+            
+    
+            <nav class="menu-navegavel">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="selecao_incidente.html">Registro </a></li>
+                    <li><a href="notificacao.html">Notificações</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+            <main>
+                <br>
+                <button class="button-pequeno voltar" onclick="history.back();">
+                    <i class="fa-solid fa-arrow-left"></i>  
+                    Voltar
+                </button>
+                <div class="main-container">
+                    <div class="login-container">
+                    <h2>Perfil</h2>
+                        <p>Nome: <script>document.write(nome)</script></p>
+                        <br>
+                        <button type="button" class="button-pequeno" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <small>&copy;<a href="integrantes.html">2024 FutureFix</a></small>
+            </footer>
+        </div>
+    
+        <script src="js/script.js"></script>
+    
+</body>
+</html>
